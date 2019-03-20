@@ -1,7 +1,7 @@
 package Test;
 
 import java.awt.AWTException;
-import java.awt.List;
+//import java.awt.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -41,7 +41,6 @@ public class ts_MultiPost {
 			obj_Mult_Post_Page.post(Tweet_Text.get(i), driver);
 			IDPOTsNEW.add(obj_Mult_Post_Page.twweetId(driver));					
         }
-//		System.out.print(IDPOTsNEW);
 		
 		Random rnd = new Random();
 //		System.out.println(rnd.nextInt(3));

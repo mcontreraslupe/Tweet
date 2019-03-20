@@ -139,8 +139,7 @@ public class Mult_Post_Page {
 		this.ClickDel(null, driver);
 				
 		WebDriverWait wait = new WebDriverWait(driver, Opciones.waitingtime);
-		wait .until(ExpectedConditions.elementToBeClickable(btn_after));
-		
+		wait .until(ExpectedConditions.elementToBeClickable(btn_after));	
 	}
 	
 	public void close()
