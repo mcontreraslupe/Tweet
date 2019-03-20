@@ -51,9 +51,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 	
 	public boolean TextTweetDel(By tweetDelMesages, WebDriver driver) {
 		boolean response;
-//		System.out.print("this is the web list: " + tweetDelMesages + "\n");
-//		java.util.List<WebElement> WarningElements = driver.findElements(tweetDelMesages);
-//		System.out.print("this is the web list: " + WarningElements + "\n");
 		Boolean WarningElements = driver.findElements(tweetDelMesages).size() > 0;
 		System.out.print("this is the web list: " + WarningElements + "\n");
 		if(WarningElements == true) {

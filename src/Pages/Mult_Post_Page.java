@@ -30,8 +30,6 @@ public class Mult_Post_Page {
 	By btn_post_del_conf = By.xpath("//*[@id=\"permalink-overlay-body\"]/div/div[1]/div[1]/div/div[1]/div/div/div/div/ul/li[8]/button");
 	By btn_post_del_reconf = By.xpath("//*[@id=\"delete-tweet-dialog-dialog\"]/div[2]/div[4]/button[2]");
 	By btn_comment = By.xpath("//html/body/div[2]/div[2]/div/div[2]/div[4]/div[2]/ol[1]/li[1]/div[1]/div[2]/div[3]/div[2]/div[1]/button");
-//	By aler_del = By.xpath("//*[@id=\"message-drawer\"]");
-//	By aler_del = By.id("alert-messages js-message-drawer-visible");
 	By aler_del = By.className("alert-messages hidden");   
 	WebDriver driver;
 
@@ -115,28 +113,6 @@ public class Mult_Post_Page {
 		
 		wait.until(ExpectedConditions.presenceOfElementLocated(btn_post_del_reconf));		
 		driver.findElement(btn_post_del_reconf).click();
-//		wait.until(ExpectedConditions.presenceOfElementLocated(aler_del));	
-////		boolean tweetmodal = true;
-//		boolean tweetDelMesages = true;
-//		
-////		By TweetDelMesages = By.xpath(aler_del);
-////		tweetmodal = Opciones.ElementIsNotPresentByLocator(driver, TweetModal);
-////		tweetDelMesages = Opciones.TextTweetDel(aler_del, driver);
-////		driver.findElement(btn_post_del).click();
-//		
-//		while(tweetDelMesages == true )
-//		{
-////			for(int i=0; i < tweetmodal; i++)
-////			{
-////				
-////			}
-////			String aler_del = "alert-messages hidden";
-////			tweetmodal = Opciones.ElementIsNotPresentByLocator(driver, TweetModal);
-//			tweetDelMesages = Opciones.TextTweetDel(aler_del, driver);
-//
-//			
-////			System.out.print("Esta es la respuesta del tweetmodal: " + tweetDelMesages);
-//		}
 	}
 	
 	public void ClickConf()
