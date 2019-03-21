@@ -35,12 +35,8 @@ public class LoginPage {
 	
 	public void setPass	(String strPass)
 	{
-//		Settings Opciones;
-//		Opciones = new Settings();
 		driver.findElement(txt_pass).click();
 		driver.findElement(txt_pass).sendKeys(strPass);
-//		WebDriverWait wait = new WebDriverWait(driver, Opciones.waitingtime);
-//		wait .until(ExpectedConditions.urlContains(Opciones.baseURL));
 	}
 	
 	public void clickLogin()
@@ -48,36 +44,12 @@ public class LoginPage {
 		Settings Opciones;
 		Opciones = new Settings();
 		driver.findElement(btn_login).click();
-//		WebDriverWait wait = new WebDriverWait(driver, Opciones.waitingtime);
-//		wait .until(ExpectedConditions.urlContains(Opciones.baseURL));
-//		wait .until(ExpectedConditions.presenceOfElementLocated(btn_post));
-		
-		
 	}
 	
-//	public void setPost	(String strPost)
-//	{
-//		driver.findElement(txt_post).sendKeys(strPost);
-//	}
-	
-//	public void clickPost()
-//	{
-//		driver.findElement(btn_post).click();
-//		WebDriverWait wait = new WebDriverWait(driver, 10);
-//		wait .until(ExpectedConditions.urlContains("https://twitter.com/?lang=en" + "#/reset"));
-//		
-//	}
 	public void login(String strMail, String strPass)	
 	{
 		this.setMail(strMail);
 		this.setPass(strPass);
 		this.clickLogin();
 	}
-	
-//	public void post(String strPost)	
-//	{
-//		this.setPost(strPost);
-//		this.clickPost();
-//	}
-
 }

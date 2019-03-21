@@ -1,8 +1,6 @@
 package Test;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import Pages.Home;
 import Pages.LoginPage;
@@ -17,8 +15,7 @@ public class ts_Post {
 		Home obj_home;
 		LoginPage obj_pageLogin;
 		WebDriver driver;
-	
-		
+			
 		Opciones = new Settings();
 		
 		driver = Opciones.MultiDriver("chrome");
@@ -34,5 +31,4 @@ public class ts_Post {
 		
 		driver.close();
 	}
-
 }
