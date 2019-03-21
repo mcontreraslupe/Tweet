@@ -118,7 +118,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 			Thread.sleep(300);
 			robot.keyPress(java.awt.event.KeyEvent.VK_ENTER);
 //			robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
-			System.out.println(iterations);
+//			System.out.println(iterations);
 			
         }
 	}
