@@ -115,7 +115,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 		
 		for(int i=0;i<=iterations;i++)
         {
-			Thread.sleep(300);
+			Thread.sleep(100);
 			robot.keyPress(java.awt.event.KeyEvent.VK_ENTER);
 //			robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
 //			System.out.println(iterations);
@@ -130,7 +130,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 			
 			for(int i=0;i<=iterations;i++)
 	        {
-				Thread.sleep(300);
+				Thread.sleep(100);
 				robot.keyPress(java.awt.event.KeyEvent.VK_TAB);
 //				robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
 //				System.out.println(iterations);
