@@ -39,25 +39,28 @@ public class Mult_Post_Page {
 	}
 		
 	public void setPost	(String strPost){
+		
 		driver.findElement(txt_post).sendKeys(strPost);
 	}
 	
 	public void clickPosts(WebDriver driver) throws InterruptedException, AWTException{
+		
 		driver.findElement(txt_post).click();		
 	}
 	
-	public String twweetId(WebDriver driver) throws InterruptedException, AWTException{
+	public String obtainTweetId(WebDriver driver) throws InterruptedException, AWTException{
+		
 		Settings Opciones;
 		Opciones = new Settings();
 	
 		Opciones.TabKeys(8);
-		String ValueAttribute = Opciones.GetElementsAttribute(btn_comment, "aria-describedby", driver);
-		String locator = ValueAttribute.substring(38, ValueAttribute.length());
+		String valueAttribute = Opciones.GetElementsAttribute(btn_comment, "aria-describedby", driver);
+		String locator = valueAttribute.substring(38, valueAttribute.length());
 		return locator;	
 	}
 	
-	public void clickPost()
-	{	
+	public void clickPost() {	
+		
 		Settings Opciones;
 		Opciones = new Settings();
 		
@@ -66,8 +69,8 @@ public class Mult_Post_Page {
 		driver.findElement(btn_post).click();							
 	}
 	
-	public void clickBtnNew()
-	{		
+	public void clickBtnNew() {		
+		
 		Settings Opciones;
 		Opciones = new Settings();
 		
@@ -76,8 +79,8 @@ public class Mult_Post_Page {
 		driver.findElement(btn_new).click();							
 	}
 	
-	public void clickExp()
-	{
+	public void clickExp() {
+		
 		Settings Opciones;
 		Opciones = new Settings();
 		
@@ -87,14 +90,13 @@ public class Mult_Post_Page {
 		driver.findElement(btn_exp).click();
 	}
 	
-	public void ClickDel(String TweetId, WebDriver driver) throws AWTException, InterruptedException
-	{
+	public void ClickDel(String TweetId, WebDriver driver) throws AWTException, InterruptedException {
 		
 		Settings Opciones;
 		Opciones = new Settings();
 		
-        String FirstPartLocator = "stream-item-tweet-";
-		By btn_post_del = By.xpath("//*[@id=\"" + FirstPartLocator + TweetId + "\"]");
+        String locatorFirstPart = "stream-item-tweet-";
+		By btn_post_del = By.xpath("//*[@id=\"" + locatorFirstPart + TweetId + "\"]");
 //		System.out.print(btn_post_del);
 		WebDriverWait wait = new WebDriverWait(driver, Opciones.waitingtime);
 		wait.until(ExpectedConditions.presenceOfElementLocated(btn_post_del));
@@ -115,24 +117,21 @@ public class Mult_Post_Page {
 		driver.findElement(btn_post_del_reconf).click();
 	}
 	
-	public void ClickConf()
-	{
+	public void ClickConf(){
+		
 		driver.findElement(btn_conf).click();		
 	}
 	
-	public void post(String strPost, WebDriver Driver) throws InterruptedException, AWTException	
-	{
-		Settings Opciones;
-		Opciones = new Settings();
-		
+	public void post(String strPost, WebDriver Driver) throws InterruptedException, AWTException	{
+				
 		this.setPost(strPost);
 		this.clickPost();
 		this.clickBtnNew();
 		this.clickPosts(Driver);
 	}
 	
-	public void  DeletePost() throws AWTException, InterruptedException	
-	{
+	public void  DeletePost() throws AWTException, InterruptedException	{
+		
 		Settings Opciones;
 		Opciones = new Settings();
 						
@@ -142,8 +141,8 @@ public class Mult_Post_Page {
 		wait .until(ExpectedConditions.elementToBeClickable(btn_after));	
 	}
 	
-	public void close()
-	{
+	public void close() {
+		
 		driver.close();
 	}
 	

@@ -31,25 +31,25 @@ public class ts_MultiPost {
 		driver.get(Opciones.baseURL);
 		obj_pageLogin.login("josedanielperezpera@gmail.com", "DaniPerez123456789");
 		
-		ArrayList<String> Tweet_Text = new ArrayList<>(Arrays.asList("Me siento Feliz", "Me siento Alegre", "Me siento Cansado"));
-		ArrayList<String> IDPOTsNEW = new ArrayList<String>();
+		ArrayList<String> tweetText = new ArrayList<>(Arrays.asList("Me siento Feliz", "Me siento Alegre", "Me siento Cansado"));
+		ArrayList<String> newIdPots = new ArrayList<String>();
 			
-		for(int i=0; i < Tweet_Text.size() ;i++)
+		for(int i=0; i < tweetText.size() ;i++)
         {
-			obj_Mult_Post_Page.post(Tweet_Text.get(i), driver);
-			IDPOTsNEW.add(obj_Mult_Post_Page.twweetId(driver));					
+			obj_Mult_Post_Page.post(tweetText.get(i), driver);
+			newIdPots.add(obj_Mult_Post_Page.obtainTweetId(driver));					
         }
 		
 		Random rnd = new Random();
 //		System.out.println(rnd.nextInt(3));
 		int DelID = rnd.nextInt(3);
-		obj_Mult_Post_Page.ClickDel(IDPOTsNEW.get(DelID),driver);
-		IDPOTsNEW.remove(DelID);
+		obj_Mult_Post_Page.ClickDel(newIdPots.get(DelID),driver);
+		newIdPots.remove(DelID);
 		Thread.sleep(1000);		
-//		System.out.print(IDPOTsNEW);
+//		System.out.print(newIdPots);
 		
 //		**********Clean Test***************
 		
-		obj_Mult_Post_Page.CleanTest(IDPOTsNEW,driver);
+		obj_Mult_Post_Page.CleanTest(newIdPots,driver);
 	}
 }

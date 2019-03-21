@@ -13,10 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 	public class Settings {
 	public String baseURL = "https://twitter.com/";
-	public String DriverChrome = "webdriver.chrome.driver";
-	public String DriverChromeRoute = "C:\\Users\\Hideki\\eclipse-workspace\\Libs\\selenium\\chromedriver.exe";
-	public String DriverFirefox = "webdriver.gecko.driver";
-	public String DriverFirefoxRoute = "C:\\Users\\Hideki\\eclipse-workspace\\Libs\\selenium\\geckodriver.exe";
+	public String driverChrome = "webdriver.chrome.driver";
+	public String driverChromeRoute = "C:\\Users\\Hideki\\eclipse-workspace\\Libs\\selenium\\chromedriver.exe";
+	public String driverFirefox = "webdriver.gecko.driver";
+	public String driverFirefoxRoute = "C:\\Users\\Hideki\\eclipse-workspace\\Libs\\selenium\\geckodriver.exe";
 	public int waitingtime = 30;
 	
 	public WebDriver MultiDriver(String Browser)
@@ -26,13 +26,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 		{
 		case "chrome": 
 		
-			System.setProperty(DriverChrome, DriverChromeRoute );
+			System.setProperty(driverChrome, driverChromeRoute );
 			driver = new ChromeDriver();
 			
 			break;
 		case "firefox": 
 			
-			System.setProperty(DriverFirefox, DriverFirefoxRoute );
+			System.setProperty(driverFirefox, driverFirefoxRoute );
 			driver = new FirefoxDriver();
 				
 			break;
@@ -49,9 +49,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 	}
 	
-	public boolean TextTweetDel(By tweetDelMesages, WebDriver driver) {
+	public boolean delTweetText(By delTweetMesages, WebDriver driver) {
 		boolean response;
-		Boolean WarningElements = driver.findElements(tweetDelMesages).size() > 0;
+		Boolean WarningElements = driver.findElements(delTweetMesages).size() > 0;
 		System.out.print("this is the web list: " + WarningElements + "\n");
 		if(WarningElements == true) {
 			response = true;
